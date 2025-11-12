@@ -19,7 +19,7 @@ namespace Game.Module.Protocol.Protobuf
         public static void OnInitialize()
         {
             GameEngine.NetworkHandler.Instance.RegMessageTranslator<TcpMessageTranslator>((int) NovaEngine.NetworkServiceType.Tcp);
-            GameEngine.NetworkHandler.Instance.RegMessageObjectTypeLoader<CommonMessageObjectTypeLoader>();
+            GameEngine.NetworkHandler.Instance.RegMessageProtocolLoader<CommonMessageProtocolLoader>();
 
             GameEngine.Loader.CodeLoader.RegisterSymbolResolverOfInstantiationClass<CommonMessageObjectClassResolver>();
         }
@@ -30,7 +30,7 @@ namespace Game.Module.Protocol.Protobuf
         public static void OnCleanup()
         {
             GameEngine.NetworkHandler.Instance.UnregMessageTranslator((int) NovaEngine.NetworkServiceType.Tcp);
-            GameEngine.NetworkHandler.Instance.UnregMessageObjectTypeLoader();
+            GameEngine.NetworkHandler.Instance.UnregMessageProtocolLoader();
 
             GameEngine.Loader.CodeLoader.UnregisterSymbolResolverOfInstantiationClass<CommonMessageObjectClassResolver>();
         }

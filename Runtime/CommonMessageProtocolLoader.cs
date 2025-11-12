@@ -16,11 +16,13 @@ namespace Game.Module.Protocol.Protobuf
     /// <summary>
     /// 消息对象类型加载器通用对象类
     /// </summary>
-    public class CommonMessageObjectTypeLoader : IMessageObjectTypeLoader
+    public class CommonMessageProtocolLoader : IMessageProtocolLoader
     {
-        public IMessageObjectTypeLoader.MessageObjectTypeInfo Parse(SystemType messageType)
+        public SystemType MessageProtocolType => typeof(ProtoBuf.Extension.IMessage);
+
+        public IMessageProtocolLoader.MessageObjectTypeInfo Parse(SystemType messageType)
         {
-            IMessageObjectTypeLoader.MessageObjectTypeInfo typeInfo = new IMessageObjectTypeLoader.MessageObjectTypeInfo();
+            IMessageProtocolLoader.MessageObjectTypeInfo typeInfo = new IMessageProtocolLoader.MessageObjectTypeInfo();
 
             ProtoBuf.Extension.MessageAttribute messageAttr = messageType.GetCustomAttribute<ProtoBuf.Extension.MessageAttribute>();
             if (null != messageAttr)
