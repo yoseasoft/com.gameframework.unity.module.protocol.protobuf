@@ -1,0 +1,21 @@
+{
+    "name": "Game.Module.Protocol.ProtoBuf",
+    "rootNamespace": "",
+    "references": [
+        "Nova.Engine",
+        "Nova.Basic",
+        "Nova.Protobuf",
+        "Nova.Protobuf.Extension"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [
+        "GAME_COMPILE || UNITY_EDITOR"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
