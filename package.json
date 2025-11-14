@@ -18,5 +18,8 @@
     "url": "https://github.com/yoseasoft/com.gameframework.unity.module.protocol.protobuf.git"
   },
   "relatedPackages": {},
-  "dependencies": {}
+  "dependencies": {
+    "com.yoseasoft.novaframework": "1.0.0",
+    "com.novaframework.unity.protobuf": "1.0.0"
+  }
 }
