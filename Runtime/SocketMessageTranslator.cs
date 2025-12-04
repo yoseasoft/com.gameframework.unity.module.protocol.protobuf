@@ -25,7 +25,7 @@ namespace Game.Module.Protocol.Protobuf
         /// </summary>
         /// <param name="message">消息内容</param>
         /// <returns>若编码有效的数据则返回其对应的字节流，否则返回null</returns>
-        public byte[] Encode(object message)
+        public virtual byte[] Encode(object message)
         {
             ProtoBuf.Extension.IMessage msg = message as ProtoBuf.Extension.IMessage;
             GameEngine.Debugger.Assert(null != msg, NovaEngine.ErrorText.InvalidArguments);
@@ -48,7 +48,7 @@ namespace Game.Module.Protocol.Protobuf
         /// </summary>
         /// <param name="buffer">消息字节流</param>
         /// <returns>返回解码后的消息内容，若解码失败则返回null</returns>
-        public object Decode(byte[] buffer)
+        public virtual object Decode(byte[] buffer)
         {
             // short opcode = System.BitConverter.ToInt16(buffer, 0);
             // opcode = System.Net.IPAddress.NetworkToHostOrder(opcode);

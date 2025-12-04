@@ -7,7 +7,6 @@
 /// </summary>
 
 using System.Reflection;
-using GameEngine;
 using GameEngine.Loader.Symboling;
 
 using SystemType = System.Type;
@@ -42,10 +41,10 @@ namespace Game.Module.Protocol.Protobuf
                 if (null != messageResponseTypeAttr)
                     responseCode = messageResponseTypeAttr.Opcode;
 
-                Debugger.Log("消息对象类‘{%s}’自动绑定‘MessageObjectAttribute’特性标签操作完成，操作码：{%d}，响应码：{%d}。", symbol.FullName, opcode, responseCode);
+                GameEngine.Debugger.Log("消息对象类‘{%s}’自动绑定‘MessageObjectAttribute’特性标签操作完成，操作码：{%d}，响应码：{%d}。", symbol.FullName, opcode, responseCode);
 
-                // symbol.AddFeatureType(typeof(MessageObjectAttribute));
-                MessageObjectAttribute attribute = new MessageObjectAttribute(opcode, responseCode);
+                // symbol.AddFeatureType(typeof(GameEngine.MessageObjectAttribute));
+                GameEngine.MessageObjectAttribute attribute = new GameEngine.MessageObjectAttribute(opcode, responseCode);
                 symbol.AddFeatureObject(attribute);
             }
         }
