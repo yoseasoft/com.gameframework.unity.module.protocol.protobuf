@@ -19,7 +19,7 @@ namespace Game.Module.Protocol.Protobuf
         public void Startup()
         {
             GameEngine.GameApi.SetMessageProtocolType(typeof(ProtoBuf.Extension.IMessage));
-            GameEngine.GameApi.RegisterMessageTranslator<TcpMessageTranslator>((int) NovaEngine.NetworkServiceType.Tcp);
+            GameEngine.GameApi.RegisterMessageTranslator<TcpMessageTranslator>((int) NovaEngine.Module.NetworkServiceType.Tcp);
 
             GameEngine.Loader.CodeLoader.RegisterSymbolResolverOfInstantiationClass<CommonMessageObjectClassResolver>();
         }
@@ -29,7 +29,7 @@ namespace Game.Module.Protocol.Protobuf
         /// </summary>
         public void Shutdown()
         {
-            GameEngine.GameApi.UnregisterMessageTranslator((int) NovaEngine.NetworkServiceType.Tcp);
+            GameEngine.GameApi.UnregisterMessageTranslator((int) NovaEngine.Module.NetworkServiceType.Tcp);
 
             GameEngine.Loader.CodeLoader.UnregisterSymbolResolverOfInstantiationClass<CommonMessageObjectClassResolver>();
         }
