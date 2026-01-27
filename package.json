@@ -1,6 +1,6 @@
 {
   "name": "com.gameframework.unity.module.protocol.protobuf",
-  "displayName": "GameFramework.Module.Protocol.Protobuf",
+  "displayName": "GameFramework.Protocol.Protobuf",
   "description": "The Protocol.Protobuf module package for GameFramework",
   "version": "1.0.0",
   "unity": "2018.3",
