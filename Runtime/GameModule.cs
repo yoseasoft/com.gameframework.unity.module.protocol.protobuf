@@ -6,7 +6,7 @@
 /// 功能描述：
 /// </summary>
 
-namespace Game.Module.Protocol.Protobuf
+namespace GameFramework.Protocol.Protobuf
 {
     /// <summary>
     /// 程序集的管理模块对象类

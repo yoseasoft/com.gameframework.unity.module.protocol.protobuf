@@ -6,14 +6,12 @@
 /// 功能描述：
 /// </summary>
 
-using GameEngine;
-
-namespace Game.Module.Protocol.Protobuf
+namespace GameFramework.Protocol.Protobuf
 {
     /// <summary>
     /// Web服务类型通道的消息解析器对象类，用于对Web服务通道的网络消息数据进行加工
     /// </summary>
-    public abstract class WebMessageTranslator : IMessageTranslator
+    public abstract class WebMessageTranslator : GameEngine.IMessageTranslator
     {
         /// <summary>
         /// 将指定的消息内容编码为可发送的消息字节流

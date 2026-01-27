@@ -6,19 +6,17 @@
 /// 功能描述：
 /// </summary>
 
+using System;
 using System.Reflection;
-using GameEngine.Loader.Symbolling;
 
-using SystemType = System.Type;
-
-namespace Game.Module.Protocol.Protobuf
+namespace GameFramework.Protocol.Protobuf
 {
     /// <summary>
     /// 消息对象类解析器通用对象类
     /// </summary>
-    public class CommonMessageObjectClassResolver : ISymbolResolverOfInstantiationClass
+    public class CommonMessageObjectClassResolver : GameEngine.Loader.Symbolling.ISymbolResolverOfInstantiationClass
     {
-        public bool Matches(SystemType targetType)
+        public bool Matches(Type targetType)
         {
             if (typeof(ProtoBuf.Extension.IMessage).IsAssignableFrom(targetType))
             {
@@ -28,7 +26,7 @@ namespace Game.Module.Protocol.Protobuf
             return false;
         }
 
-        public void Resolve(SymClass symbol)
+        public void Resolve(GameEngine.Loader.Symbolling.SymClass symbol)
         {
             if (symbol.HasAttribute(typeof(ProtoBuf.Extension.MessageAttribute)))
             {
