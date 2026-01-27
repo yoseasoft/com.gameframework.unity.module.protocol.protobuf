@@ -1,12 +1,12 @@
 {
-    "name": "Game.Module.Protocol.Protobuf",
+    "name": "GameFramework.Protocol.Protobuf",
     "rootNamespace": "",
     "references": [
-        "Nova.Engine",
-        "Nova.Basic",
-        "Nova.Import",
-        "Nova.Protobuf",
-        "Nova.Protobuf.Extension"
+        "NovaFramework.Protobuf",
+        "NovaFramework.Protobuf.Extension",
+        "NovaEngine.Kernel",
+        "NovaEngine.Basic",
+        "NovaEngine.Import"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
