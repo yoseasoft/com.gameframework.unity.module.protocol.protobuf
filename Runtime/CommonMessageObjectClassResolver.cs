@@ -16,7 +16,7 @@ namespace GameFramework.Protocol.Protobuf
     /// </summary>
     public class CommonMessageObjectClassResolver : GameEngine.Loader.Symbolling.ISymbolResolverOfInstantiationClass
     {
-        public bool Matches(Type targetType)
+        public bool IsMatched(Type targetType)
         {
             if (typeof(ProtoBuf.Extension.IMessage).IsAssignableFrom(targetType))
             {
